@@ -71,6 +71,6 @@ class SpeedtestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def speedtest_params
-      params.permit(:ssid, :ping, :upload, :download)
+      params.permit(:ssid, :ping, :upload, :download, :hostname)
     end
 end
