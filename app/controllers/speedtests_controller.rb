@@ -6,7 +6,7 @@ class SpeedtestsController < ApplicationController
   # GET /speedtests.json
   def index
 
-    @speedtests = Speedtest.all
+    @speedtests = Speedtest.all.order(:created_at).reverse
   end
 
   # GET /speedtests/1
