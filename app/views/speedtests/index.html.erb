@@ -5,10 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th>Hostname</th>
       <th>Ssid</th>
       <th>Ping</th>
       <th>Upload</th>
       <th>Download</th>
+      <th>Created at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +18,12 @@
   <tbody>
     <% @speedtests.each do |speedtest| %>
       <tr>
+        <td><%= speedtest.hostname %></td>
         <td><%= speedtest.ssid %></td>
         <td><%= speedtest.ping %></td>
         <td><%= speedtest.upload %></td>
         <td><%= speedtest.download %></td>
-        <td><%= link_to 'Show', speedtest %></td>
-        <td><%= link_to 'Edit', edit_speedtest_path(speedtest) %></td>
-        <td><%= link_to 'Destroy', speedtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= speedtest.created_at %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Speedtest', new_speedtest_path %>
+<!-- <%= link_to 'New Speedtest', new_speedtest_path %> -->
