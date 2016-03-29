@@ -1,0 +1,33 @@
+<%= form_for(@speedtest) do |f| %>
+  <% if @speedtest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@speedtest.errors.count, "error") %> prohibited this speedtest from being saved:</h2>
+
+      <ul>
+      <% @speedtest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ssid %><br>
+    <%= f.text_field :ssid %>
+  </div>
+  <div class="field">
+    <%= f.label :ping %><br>
+    <%= f.text_field :ping %>
+  </div>
+  <div class="field">
+    <%= f.label :upload %><br>
+    <%= f.text_field :upload %>
+  </div>
+  <div class="field">
+    <%= f.label :download %><br>
+    <%= f.text_field :download %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

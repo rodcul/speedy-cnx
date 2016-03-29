@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ssid: MyString
+  ping: 9.99
+  upload: 9.99
+  download: 9.99
+
+two:
+  ssid: MyString
+  ping: 9.99
+  upload: 9.99
+  download: 9.99
