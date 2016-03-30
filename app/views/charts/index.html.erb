@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Speedtests</h1>
+
+<%= column_chart Speedtest.group_by_hour(:created_at).count %>
+
+
+<br>
+
+<!-- <%= link_to 'New Speedtest', new_speedtest_path %> -->
